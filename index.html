@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia & Puzzles Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Trivia & Puzzles Hub</h1>
+      <p>Challenge yourself with trivia rounds and quick brain teasers.</p>
+    </header>
+
+    <main class="layout">
+      <section class="card" id="trivia-card">
+        <div class="card-header">
+          <h2>Daily Trivia</h2>
+          <span class="pill" id="question-progress">1 / 5</span>
+        </div>
+        <p id="question" class="question"></p>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="button-row">
+          <button id="next-question" class="btn">Next Question</button>
+          <button id="reset-trivia" class="btn btn-secondary">Reset Round</button>
+        </div>
+        <p class="score">Score: <span id="score">0</span> / <span id="total">0</span></p>
+        <p class="score muted">Best Score: <span id="best-score">0</span></p>
+      </section>
+
+      <section class="card" id="puzzle-card">
+        <div class="card-header">
+          <h2>Word Unscramble Puzzle</h2>
+          <span class="pill" id="attempt-count">Attempts: 0</span>
+        </div>
+        <p class="prompt">Unscramble this word:</p>
+        <p id="scrambled" class="scrambled"></p>
+        <label for="guess" class="sr-only">Enter your guess</label>
+        <input id="guess" type="text" placeholder="Type your answer" autocomplete="off" />
+        <div class="button-row">
+          <button id="check-guess" class="btn">Check</button>
+          <button id="show-hint" class="btn btn-secondary">Hint</button>
+          <button id="new-puzzle" class="btn btn-secondary">New Puzzle</button>
+        </div>
+        <p id="puzzle-feedback" class="feedback" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <small>Built with ❤️ for curious minds.</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
